@@ -11,14 +11,16 @@ const title = document.getElementById('title');
 const cover = document.getElementById('cover');
 
 //song titles
-const songs = ['chill', 'edm', 'riser', 'tropical'];
+const songs = ['chill.wav', 'edm.mp3', 'riser.wav', 'tropical.wav'];
 
 //keep track of songs
 let songIndex = 2;
 
 function loadSong(song) {
     title.innerText = song;
-    audio.src = `music/${song}.mp3`;
+    audio.src = `music/${song}`;
+    //to get cover but without the wav or mp3
+    const songName = song.split('.')[0];
     cover.src = `images/${song}.jpg`;
 }
 
